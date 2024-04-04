@@ -3,7 +3,7 @@ import { Screenshot } from "../entities/Screenshot";
 import { useQuery } from "@tanstack/react-query";
 
 const useScreenShots = (gameId: number) => {
-    const apiClient = new APIClient<Screenshot>(`/games/${gameId}screenshots/`);
+    const apiClient = new APIClient<Screenshot>(`/games/${gameId}/screenshots`);
 
     return useQuery({
         queryKey: ['screenshots', gameId],

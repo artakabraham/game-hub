@@ -6,12 +6,12 @@ import GameDetailPage from "./pages/GameDetailPage";
 
 const router = createBrowserRouter([
     {
-        path: '/game-hub/',
+        path: '/game-hub',
         element: <Layout />,
         errorElement: <ErrorPage />,
         children: [
             { index: true, element: <HomePage /> },
-            { path: 'games/:id', element: <GameDetailPage /> }
+            { path: 'games/:slug', element: <GameDetailPage /> }
         ]
     }
 ]);
